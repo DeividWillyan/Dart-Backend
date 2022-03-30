@@ -3,6 +3,7 @@ import 'package:shelf/shelf.dart';
 import 'apis/blog_api.dart';
 import 'apis/login_api.dart';
 import 'infra/custom_server.dart';
+import 'infra/middleware_interception.dart';
 import 'services/noticia_service.dart';
 import 'utils/custom_env.dart';
 
@@ -14,8 +15,10 @@ void main() async {
       .add(BlogApi(NoticiaService()).handler)
       .handler;
 
-  var handler =
-      Pipeline().addMiddleware(logRequests()).addHandler(cascadeHandler);
+  var handler = Pipeline()
+      .addMiddleware(logRequests())
+      .addMiddleware(MiddlewareInterception().middlerware)
+      .addHandler(cascadeHandler);
 
   await CustomServer().initialize(
     handler: handler,
