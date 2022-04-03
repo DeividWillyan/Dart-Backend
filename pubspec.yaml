@@ -13,5 +13,6 @@ environment:
 dev_dependencies:
   lints: ^1.0.0
 dependencies: 
+  dart_jsonwebtoken: ^2.4.1
   shelf: ^1.2.0
   shelf_router: ^1.1.2

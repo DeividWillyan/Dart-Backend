@@ -20,6 +20,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "convert",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/convert-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "crypto",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "dart_jsonwebtoken",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/dart_jsonwebtoken-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http_methods",
       "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/http_methods-1.1.0",
       "packageUri": "lib/",
@@ -28,6 +46,12 @@
     {
       "name": "http_parser",
       "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/js-0.6.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -46,6 +70,12 @@
     {
       "name": "path",
       "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/path-1.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/pointycastle-3.5.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -98,19 +128,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "yaml",
-      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "backend",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-03-28T16:56:51.910417Z",
+  "generated": "2022-04-02T20:26:20.082987Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }
