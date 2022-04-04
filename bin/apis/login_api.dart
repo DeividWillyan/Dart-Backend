@@ -14,7 +14,7 @@ class LoginApi {
       var token = await _securityService.generateJWT('1');
       var result = await _securityService.validateJWT(token);
 
-      return Response.ok((result != null).toString());
+      return Response.ok(token);
     });
 
     return router;

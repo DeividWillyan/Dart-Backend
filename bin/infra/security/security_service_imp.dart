@@ -1,7 +1,11 @@
+import 'package:shelf/shelf.dart';
+
 import '../../utils/custom_env.dart';
 import 'security_service.dart';
 
 import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
+
+import 'validate/api_router_validade.dart';
 
 class SecurityServiceImp implements SecurityService<JWT> {
   @override
@@ -34,4 +38,42 @@ class SecurityServiceImp implements SecurityService<JWT> {
       return null;
     }
   }
+
+  @override
+  Middleware get authorization {
+    return (Handler handler) {
+      return (Request req) async {
+        String? authorizationHeader = req.headers['Authorization'];
+
+        JWT? jwt;
+
+        if (authorizationHeader != null) {
+          if (authorizationHeader.startsWith('Bearer ')) {
+            String token = authorizationHeader.substring(7);
+            jwt = await validateJWT(token);
+          }
+        }
+        var request = req.change(context: {'jwt': jwt});
+        return handler(request);
+      };
+    };
+  }
+
+  @override
+  Middleware get verifyJwt => createMiddleware(
+        requestHandler: (Request req) {
+          var _apiSecurity = ApiRouterValidate()
+              .add('login')
+              .add('xpto')
+              .add('register')
+              .add('teste');
+
+          if (_apiSecurity.isPublic(req.url.path)) return null;
+
+          if (req.context['jwt'] == null) {
+            return Response.forbidden('Not Authorized');
+          }
+          return null;
+        },
+      );
 }

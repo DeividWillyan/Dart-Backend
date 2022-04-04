@@ -8,6 +8,7 @@ import '../services/generic_service.dart';
 
 class BlogApi {
   final GenericService<NoticiaModel> _service;
+
   BlogApi(this._service);
 
   Handler get handler {
