@@ -16,17 +16,11 @@ void main() async {
   final _di = DependencyInjector();
 
   _di.register<SecurityService>(() => SecurityServiceImp(), isSingleton: true);
-
   var _securityService = _di.get<SecurityService>();
 
   var cascadeHandler = Cascade()
       .add(LoginApi(_securityService).getHandler())
-      .add(BlogApi(NoticiaService()).getHandler(
-        middlewares: [
-          _securityService.authorization,
-          _securityService.verifyJwt
-        ],
-      ))
+      .add(BlogApi(NoticiaService()).getHandler(isSecurity: true))
       .handler;
 
   var handler = Pipeline()
