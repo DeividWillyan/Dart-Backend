@@ -1,0 +1,19 @@
+
+version: '3.3'
+services:
+  database:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'dart'   
+      MYSQL_USER: 'dart_user'
+      MYSQL_PASSWORD: 'dart_pass'      
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - './volumes/mysql:/var/lib/mysql'
+      - "./db.sql:/docker-entrypoint-initdb.d/1.sql"
