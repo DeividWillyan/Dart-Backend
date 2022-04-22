@@ -1,8 +1,11 @@
 import '../../apis/blog_api.dart';
 import '../../apis/login_api.dart';
+import '../../apis/usuario_api.dart';
+import '../../dao/usuario_dao.dart';
 import '../../models/noticia_model.dart';
 import '../../services/generic_service.dart';
 import '../../services/noticia_service.dart';
+import '../../services/usuario_service.dart';
 import '../database/db_configuration.dart';
 import '../database/mysql_db_configuration.dart';
 import '../security/security_service.dart';
@@ -21,6 +24,10 @@ class Injects {
 
     di.register<GenericService<NoticiaModel>>(() => NoticiaService());
     di.register<BlogApi>(() => BlogApi(di<GenericService<NoticiaModel>>()));
+
+    di.register<UsuarioDAO>(() => UsuarioDAO(di<DBConfiguration>()));
+    di.register<UsuarioService>(() => UsuarioService(di<UsuarioDAO>()));
+    di.register<UsuarioApi>(() => UsuarioApi(di<UsuarioService>()));
 
     return di;
   }

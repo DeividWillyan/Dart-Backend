@@ -29,6 +29,13 @@ class UsuarioModel {
     );
   }
 
+  factory UsuarioModel.fromRequest(Map map) {
+    return UsuarioModel()
+      ..name = map['name']
+      ..email = map['email']
+      ..password = map['password'];
+  }
+
   @override
   String toString() {
     return 'UsuarioModel(id: $id, name: $name, email: $email, isActived: $isActived, dtCreated: $dtCreated, dtUpdated: $dtUpdated)';
