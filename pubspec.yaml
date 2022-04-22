@@ -15,5 +15,6 @@ dev_dependencies:
 dependencies: 
   dart_jsonwebtoken: ^2.4.1
   mysql1: ^0.19.2
+  password_dart: ^2.0.1
   shelf: ^1.2.0
   shelf_router: ^1.1.2
