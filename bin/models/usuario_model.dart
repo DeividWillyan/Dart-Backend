@@ -1,12 +1,15 @@
 class UsuarioModel {
-  final int id;
-  final String name;
-  final String email;
-  final bool isActived;
-  final DateTime dtCreated;
-  final DateTime dtUpdated;
+  int? id;
+  String? name;
+  String? email;
+  String? password;
+  bool? isActived;
+  DateTime? dtCreated;
+  DateTime? dtUpdated;
 
-  UsuarioModel(
+  UsuarioModel();
+
+  UsuarioModel.create(
     this.id,
     this.name,
     this.email,
@@ -16,7 +19,7 @@ class UsuarioModel {
   );
 
   factory UsuarioModel.fromMap(Map<String, dynamic> map) {
-    return UsuarioModel(
+    return UsuarioModel.create(
       map['id']?.toInt() ?? 0,
       map['nome'] ?? '',
       map['email'] ?? '',
