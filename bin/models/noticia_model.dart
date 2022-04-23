@@ -19,6 +19,7 @@ class NoticiaModel {
   }
   factory NoticiaModel.fromRequest(Map map) {
     return NoticiaModel()
+      ..id = map['id']
       ..title = map['title']
       ..description = map['description']
       ..userId = map['userId']?.toInt();
