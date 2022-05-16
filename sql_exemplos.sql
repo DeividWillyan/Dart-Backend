@@ -28,7 +28,7 @@ insert into noticias (titulo, descricao, id_usuario) values ('Noticia XPTO', 'Se
 insert into noticias (titulo, descricao, id_usuario) values ('Noticia Quente', 'Hoje fez 30 graus', 2);
 
 # atualiza na tabela noticia o titlu onde a id da noticia for 1 e o id do usuario foi 1.
-update noticias set titulo = 'Noticia da Chuva' where id = 1 and id_usuario = 1;
+update noticias set titulo = 'Noticia da Chuva', descricao = '' where id = 1 and id_usuario = 1;
 
 # busca todas as noticias para o usuario com id 1
 select * from noticias where id_usuario = 1;

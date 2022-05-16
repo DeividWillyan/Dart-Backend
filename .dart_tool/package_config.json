@@ -62,8 +62,26 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "logging",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/logging-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "meta",
       "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/meta-1.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "mysql1",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/mysql1-0.19.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "password_dart",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/password_dart-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -76,6 +94,12 @@
     {
       "name": "pointycastle",
       "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/pointycastle-3.5.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pool",
+      "rootUri": "file:///Users/deivid.fabiano/.pub-cache/hosted/pub.dartlang.org/pool-1.5.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -134,7 +158,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-04-02T20:26:20.082987Z",
+  "generated": "2022-04-22T21:29:21.824333Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }
