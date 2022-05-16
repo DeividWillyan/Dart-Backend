@@ -18,7 +18,8 @@ class CustomEnv {
   }
 
   static Future<void> _load() async {
-    List<String> linhas = (await _readFile()).split('\n');
+    List<String> linhas = (await _readFile()).split('\n')
+      ..removeWhere((e) => e.isEmpty);
     _map = {for (var l in linhas) l.split('=')[0]: l.split('=')[1]};
   }
 
